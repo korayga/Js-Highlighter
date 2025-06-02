@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <!-- Meta etiketleri ve karakter seti tanımlaması -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Highlighter and Parser </title>
+    <!-- Bootstrap ve Font Awesome CSS dosyaları -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Özel stil dosyası -->
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="main-container">
+        <!-- Başlık bölümü -->
+        <div class="header-section">
+            <h1><i class="fas fa-code"></i> Grammar-Based Syntax Highlighter </h1>
+        </div>
+
+        <!-- Ana içerik bölümü -->
+        <div class="container-fluid p-4">
+            <div class="row g-4">
+                <!-- Kod düzenleyici bölümü -->
+                <div class="col-lg-8">
+                    <div class="editor-container">
+                        <div class="editor-body">
+                                <textarea id="codeInput" spellcheck="false"
+                                          placeholder="JavaScript kodunuzu buraya yazın..."></textarea>
+                            <pre id="highlightOutput" aria-hidden="true"></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analiz paneli bölümü -->
+                <div class="col-lg-4">
+                    <div class="info-panel">
+                        <!-- İstatistikler -->
+                        <div class="stats-grid">
+                            <div class="stats-card">
+                                <span id="tokenCount" class="stats-number">0</span>
+                                <span class="stats-label">Token Sayısı</span>
+                            </div>
+                            <div class="stats-card" style="background: linear-gradient(135deg, #dc3545, #bd2130);">
+                                <span id="errorCount" class="stats-number">0</span>
+                                <span class="stats-label">Hata Sayısı</span>
+                            </div>
+                        </div>
+
+                        <!-- Sekme menüsü -->
+                        <ul class="nav nav-tabs" id="analysisTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="tokens-tab" data-bs-toggle="tab"
+                                        data-bs-target="#tokens" type="button">
+                                    <i class="fas fa-list"></i> Tokenlar
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="parse-tab" data-bs-toggle="tab" data-bs-target="#parse"
+                                        type="button">
+                                    <i class="fas fa-sitemap"></i> Parse Tree
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="grammar-tab" data-bs-toggle="tab"
+                                        data-bs-target="#grammar" type="button">
+                                    <i class="fas fa-book"></i> Dilbilgisi
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="errors-tab" data-bs-toggle="tab"
+                                        data-bs-target="#errors" type="button">
+                                    <i class="fas fa-exclamation-triangle"></i> Hatalar
+                                </button>
+                            </li>
+                        </ul>
+
+                        <!-- Sekme içerikleri -->
+                        <div class="tab-content" id="analysisTabContent">
+                            <!-- Tokenlar sekmesi -->
+                            <div class="tab-pane fade show active" id="tokens" role="tabpanel">
+                                <div class="panel-body">
+                                    <div id="tokenList"></div>
+                                </div>
+                            </div>
+                            <!-- Parse tree sekmesi -->
+                            <div class="tab-pane fade" id="parse" role="tabpanel">
+                                <div class="panel-body">
+                                    <div id="parseTree" class="parse-tree">Parse tree burada görünecek...</div>
+                                </div>
+                            </div>
+                            <!-- Dilbilgisi sekmesi -->
+                            <div class="tab-pane fade" id="grammar" role="tabpanel">
+                                <div class="panel-body">
+                                    <div id="grammarRules"></div>
+                                </div>
+                            </div>
+                            <!-- Hatalar sekmesi -->
+                            <div class="tab-pane fade" id="errors" role="tabpanel">
+                                <div class="panel-body">
+                                    <div id="errorList"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript dosyaları -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="js/Lexer.js"></script>
+<script src="js/Parser.js"></script>
+<script src="js/Highlighter.js"></script>
+<script src="js/ASTVisualizer.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>
