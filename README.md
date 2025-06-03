@@ -1,7 +1,9 @@
 
 # JavaScript Parser & Syntax Highlighter
 
-🚀 **Grammar-Based Syntax Highlighter** - Gerçek zamanlı JavaScript sözdizimi analizi ve görselleştirme aracı
+🚀 **JavaScript Syntax Highlighter** - Gerçek zamanlı JavaScript sözdizimi analizi ve görselleştirme aracı
+
+### 🎥 Detaylı anlatım videosunu izlemek isterseniz YouTube adresim : https://www.youtube.com/watch?v=rmUQEf1frwY
 
 ##  Özellikler
 
@@ -30,7 +32,7 @@
 1. **Projeyi klonlayın:**
 ```bash
 git clone https://github.com/korayga/js-highlighter.git
-cd js-parser-highlighter
+cd js-highlighter
 ```
 
 2. **HTTP sunucu başlatın:**
@@ -40,12 +42,12 @@ python -m http.server 8000
 
 
 # Live Server (VS Code extension) ile
-# son.html dosyasına sağ tıklayıp "Open with Live Server"
+# index.html dosyasına sağ tıklayıp "Open with Live Server"
 ```
 
 3. **Tarayıcıda açın:**
 ```
-http://localhost:8000/son.html
+http://localhost:8000/index.html
 ```
 
 ## 📁 Proje Yapısı
