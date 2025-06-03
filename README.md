@@ -3,7 +3,7 @@
 
 🚀 **JavaScript Syntax Highlighter** - Gerçek zamanlı JavaScript sözdizimi analizi ve görselleştirme aracı
 
-### 🎥 Detaylı anlatım videosunu izlemek isterseniz YouTube adresim : https://www.youtube.com/watch?v=rmUQEf1frwY
+### 🎥 Detaylı anlatım videosunu izlemek isterseniz YouTube video adresim : https://www.youtube.com/watch?v=rmUQEf1frwY
 
 ##  Özellikler
 
