@@ -1,7 +1,10 @@
 
 # JavaScript Parser & Syntax Highlighter
 
-🚀 **JavaScript Syntax Highlighter** - Gerçek zamanlı JavaScript sözdizimi analizi ve görselleştirme aracı
+### 🚀 **JavaScript Syntax Highlighter** Gerçek zamanlı JavaScript sözdizimi analizi ve görselleştirme aracı   
+
+###🔗 Canlı Demo → [JavaScript Syntax Highlighter](https://korayga.github.io/js-highlighter/)
+    
 
 ### 🎥 Detaylı anlatım videosunu izlemek isterseniz YouTube video adresim : https://www.youtube.com/watch?v=rmUQEf1frwY
 
