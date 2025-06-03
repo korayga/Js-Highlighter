@@ -3,11 +3,11 @@
 
 ### 🚀 **JavaScript Syntax Highlighter** Gerçek zamanlı JavaScript sözdizimi analizi ve görselleştirme aracı   
 
-###🔗 Canlı Demo → [JavaScript Syntax Highlighter](https://korayga.github.io/js-highlighter/)
+###🔗 Canlı test etmek için tıklayın → [JavaScript Syntax Highlighter](https://korayga.github.io/js-highlighter/)
     
-
 ### 🎥 Detaylı anlatım videosunu izlemek isterseniz YouTube video adresim : https://www.youtube.com/watch?v=rmUQEf1frwY
 
+### Detaylı Teknik Anlatım public Medium makalem : https://medium.com/@krygrp0/taray%C4%B1c%C4%B1da-%C3%A7al%C4%B1%C5%9Fan-javascript-s%C3%B6zdizimi-vurgulay%C4%B1c%C4%B1-ve-parser-nas%C4%B1l-yap%C4%B1l%C4%B1r-0b25e31dcda5 <br>
 ##  Özellikler
 
 | Özellik                          | Açıklama                                                                 |
