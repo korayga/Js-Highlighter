@@ -3,7 +3,7 @@
 
 ### 🚀 **JavaScript Syntax Highlighter** Gerçek zamanlı JavaScript sözdizimi analizi ve görselleştirme aracı   
 
-###🔗 Canlı test etmek için tıklayın → [JavaScript Syntax Highlighter](https://korayga.github.io/js-highlighter/)
+### 🔗 Canlı test etmek için tıklayın → [JavaScript Syntax Highlighter](https://korayga.github.io/js-highlighter/)
     
 ### 🎥 Detaylı anlatım videosunu izlemek isterseniz YouTube video adresim : https://www.youtube.com/watch?v=rmUQEf1frwY
 
@@ -72,9 +72,9 @@ js-parser-highlighter/
 
 ---
 
-### * Lexer (Sözcüksel Analiz) *
+###  Lexer (Sözcüksel Analiz) 
 
-**-- Token Türleri --**  
+** -- Token Türleri -- **  
 Lexer, kaynak kodu anlamlı birimlere (tokenlara) ayırır. Tanımlanan başlıca türler:
 
 - `KEYWORD` → `if`, `let`, `function`, `switch`, `return`, vb.  
@@ -86,7 +86,7 @@ Lexer, kaynak kodu anlamlı birimlere (tokenlara) ayırır. Tanımlanan başlıc
 - `COMMENT` → `// tek satır`, `/* çoklu yorum */`  
 - `UNKNOWN` → Tanınmayan ya da hatalı karakterler
 
-**-- Regex Tabanlı Yaklaşım --**  
+** -- Regex Tabanlı Yaklaşım -- **  
 Her token, belirli bir RegEx ile tanımlanır. Sıra önemlidir: çok karakterli operatorler (`===`) önce gelmelidir.
 
 Örnek:
@@ -96,20 +96,20 @@ Her token, belirli bir RegEx ile tanımlanır. Sıra önemlidir: çok karakterli
 { type: 'NUMBER', regex: /^\d+(\.\d+)?/ }
 ```
 
-**-- Konum Takibi --**  
+** -- Konum Takibi -- **  
 Her token’a şu bilgiler atanır:
 - Satır (`line`) ve sütun (`column`)
 - Başlangıç-bitiş index’i (`start`, `end`)
 - Karakter uzunluğu
 
-**-- Hata Toleransı --**  
+** -- Hata Toleransı -- **  
 Tanımsız karakterler `"UNKNOWN"` türüyle işaretlenir ve analiz durmaz. Bu, **hatalı kodu da** tokenize edebilme imkanı sağlar.
 
 ---
 
-### * Parser (Sözdizimi Analizi) *
+###  Parser (Sözdizimi Analizi) 
 
-**-- Recursive Descent Parser --**  
+**-- Recursive Descent Parser -- **  
 Parser, top-down (yukarıdan aşağı) ve **özyinelemeli (recursive)** bir yaklaşımla çalışır.  
 Her yapı (`if`, `while`, `function`, `switch`) için ayrı `parseX()` fonksiyonları vardır.
 
@@ -125,7 +125,7 @@ parseIfStatement() {
 }
 ```
 
-**-- JavaScript Dilbilgisi (Grammar) --**  
+** -- JavaScript Dilbilgisi (Grammar) -- **  
 EBNF yapısı ile desteklenen üretim kuralları:
 ```ebnf
 IfStatement ::= "if" "(" Expression ")" Statement ("else" Statement)?
@@ -133,7 +133,7 @@ FunctionDeclaration ::= "function" IDENTIFIER "(" ParameterList? ")" Block
 SwitchStatement ::= "switch" "(" Expression ")" "{" CaseBlock "}"
 ```
 
-**-- AST (Abstract Syntax Tree) --**  
+** -- AST (Abstract Syntax Tree) -- **  
 Kod yapılarının ağaç biçimli temsili. Örnek:
 ```
 IfStatement
@@ -142,7 +142,7 @@ IfStatement
     └── ReturnStatement: x
 ```
 
-**-- Hata Kurtarma (Error Recovery) --**  
+** -- Hata Kurtarma (Error Recovery) -- **  
 Parser hata durumunda durmaz:  
 - `addError()` ile hata listesine kayıt ekler  
 - Sonraki yapı için **devam eder**  
